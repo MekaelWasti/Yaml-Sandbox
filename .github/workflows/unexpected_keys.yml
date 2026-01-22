@@ -1,0 +1,10 @@
+name: Unexpected keys
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    foo: bar   # <- unexpected key in a job object
+    steps:
+      - run: echo "hi"
