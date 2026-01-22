@@ -5,6 +5,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/main' }}  # Missing closing brace
+    if: ${{ github.ref == 'refs/heads/main' }  # Syntax error: missing closing brace
     steps:
       - run: echo "Expression syntax error"
