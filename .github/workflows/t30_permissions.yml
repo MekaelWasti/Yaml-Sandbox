@@ -1,0 +1,12 @@
+name: t30 - Invalid Permissions
+on:
+  workflow_dispatch:
+
+permissions:
+  invalid-permission: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Permissions test"

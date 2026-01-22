@@ -1,0 +1,9 @@
+name: t10 - Needs Context Missing
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ needs.build.outputs.version }}"  # No needs defined

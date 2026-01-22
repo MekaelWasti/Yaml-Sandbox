@@ -1,0 +1,10 @@
+name: t20 - Bad Cron Expression
+on:
+  schedule:
+    - cron: "invalid cron"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Cron test"

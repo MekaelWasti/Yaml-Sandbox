@@ -1,0 +1,10 @@
+name: t17 - Invalid Webhook Event
+on:
+  invalid_event:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Invalid event"

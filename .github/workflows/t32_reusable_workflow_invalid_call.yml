@@ -1,0 +1,9 @@
+name: t32 - Reusable Workflow Invalid Call (Alt)
+on:
+  workflow_dispatch:
+
+jobs:
+  call-workflow:
+    uses: owner/repo/.github/workflows/invalid.yml@main
+    with:
+      nonexistent_input: value

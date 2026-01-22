@@ -1,0 +1,12 @@
+name: t27 - Job and Step ID Uniqueness
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - id: duplicate_id
+        run: echo "First"
+      - id: duplicate_id
+        run: echo "Second"

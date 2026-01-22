@@ -1,0 +1,7 @@
+name: t31 - Reusable Workflow Invalid Call
+on:
+  workflow_dispatch:
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/nonexistent.yml

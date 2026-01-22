@@ -1,0 +1,11 @@
+name: t19 - Bad Glob Pattern
+on:
+  push:
+    paths:
+      - "**.md[["  # Invalid glob pattern
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Glob test"

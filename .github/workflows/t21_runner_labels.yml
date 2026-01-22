@@ -1,0 +1,9 @@
+name: t21 - Invalid Runner Labels
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: [nonexistent-runner, invalid-label]
+    steps:
+      - run: echo "Runner labels test"

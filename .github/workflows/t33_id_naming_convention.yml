@@ -1,0 +1,10 @@
+name: t33 - ID Naming Convention
+on:
+  workflow_dispatch:
+
+jobs:
+  Invalid-Job-ID:
+    runs-on: ubuntu-latest
+    steps:
+      - id: Invalid-Step-ID
+        run: echo "ID naming test"

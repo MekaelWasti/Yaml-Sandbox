@@ -1,0 +1,10 @@
+name: t14 - Script Injection
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Issue title: ${{ github.event.issue.title }}"

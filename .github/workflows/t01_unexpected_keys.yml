@@ -1,0 +1,10 @@
+name: t01 - Unexpected Keys
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    invalid_key: "This key is not expected"
+    steps:
+      - run: echo "Testing unexpected keys"

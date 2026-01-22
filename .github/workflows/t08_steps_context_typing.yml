@@ -1,0 +1,11 @@
+name: t08 - Steps Context Typing
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - id: step1
+        run: echo "first"
+      - run: echo "${{ steps.nonexistent.outputs.value }}"

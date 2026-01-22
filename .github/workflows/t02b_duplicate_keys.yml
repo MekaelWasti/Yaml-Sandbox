@@ -1,0 +1,10 @@
+name: t02b - Duplicate Keys
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    runs-on: windows-latest  # Duplicate key
+    steps:
+      - run: echo "Duplicate keys test"

@@ -1,0 +1,11 @@
+name: t35 - Deprecated Workflow Commands
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "::set-env name=VAR::value"
+          echo "::add-path::/path/to/bin"
