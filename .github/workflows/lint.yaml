@@ -11,7 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run actionlint
-        uses: rhysd/actionlint@v1.6.0
+      - name: Run actionlint (docker)
+        uses: docker://rhysd/actionlint:latest
         with:
-          fail-on-error: false
+          args: -color
+        continue-on-error: true
