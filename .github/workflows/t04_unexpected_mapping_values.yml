@@ -1,0 +1,10 @@
+name: t04 - Unexpected Mapping Values
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: 
+      invalid: mapping  # Should be string or array
+    steps:
+      - run: echo "Unexpected mapping values"

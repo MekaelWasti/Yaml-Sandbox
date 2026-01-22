@@ -1,0 +1,9 @@
+name: t09 - Matrix Context Missing
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ matrix.os }}"  # No matrix defined

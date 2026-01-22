@@ -1,0 +1,12 @@
+name: t16 - Invalid Matrix Values
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: []  # Empty matrix
+    steps:
+      - run: echo "Matrix test"

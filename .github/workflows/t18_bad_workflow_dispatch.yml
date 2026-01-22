@@ -1,0 +1,13 @@
+name: t18 - Bad Workflow Dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        type: invalid_type
+        required: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Workflow dispatch test"

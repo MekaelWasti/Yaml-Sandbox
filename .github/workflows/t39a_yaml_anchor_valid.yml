@@ -1,0 +1,20 @@
+name: t39a - YAML Anchor Valid
+on:
+  workflow_dispatch:
+
+env: &common_env
+  NODE_ENV: production
+  DEBUG: false
+
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    env: *common_env
+    steps:
+      - run: echo "Valid anchor usage"
+  
+  test2:
+    runs-on: ubuntu-latest
+    env: *common_env
+    steps:
+      - run: echo "Reusing anchor"

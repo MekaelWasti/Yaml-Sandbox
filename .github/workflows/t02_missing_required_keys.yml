@@ -1,0 +1,9 @@
+name: t02 - Missing Required Keys
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    # Missing required 'runs-on' key
+    steps:
+      - run: echo "Missing runs-on"

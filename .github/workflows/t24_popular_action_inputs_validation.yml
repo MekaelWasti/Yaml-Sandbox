@@ -1,0 +1,11 @@
+name: t24 - Popular Action Inputs Validation
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          invalid_parameter: value

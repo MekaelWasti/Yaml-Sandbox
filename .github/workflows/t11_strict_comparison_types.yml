@@ -1,0 +1,10 @@
+name: t11 - Strict Comparison Types
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Type comparison"
+        if: ${{ '123' == 123 }}  # String vs number comparison

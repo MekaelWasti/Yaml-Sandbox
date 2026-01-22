@@ -1,0 +1,10 @@
+name: t03 - Empty Mappings
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:  # Empty mapping
+    steps:
+      - run: echo "Empty mappings test"

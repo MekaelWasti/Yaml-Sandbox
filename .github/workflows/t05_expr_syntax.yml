@@ -1,0 +1,10 @@
+name: t05 - Expression Syntax Error
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}  # Missing closing brace
+    steps:
+      - run: echo "Expression syntax error"

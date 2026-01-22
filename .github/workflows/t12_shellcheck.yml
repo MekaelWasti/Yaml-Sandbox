@@ -1,0 +1,13 @@
+name: t12 - ShellCheck Issues
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo $UNDEFINED_VAR
+          if [ $? = 0 ]; then
+            echo "success"
+          fi

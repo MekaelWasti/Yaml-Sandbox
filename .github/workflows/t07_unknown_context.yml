@@ -1,0 +1,9 @@
+name: t07 - Unknown Context
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ unknown_context.property }}"

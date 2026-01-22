@@ -1,0 +1,12 @@
+name: t29 - Invalid Environment Variable Names
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      invalid-name-with-dashes: value
+      123_starts_with_number: value
+    steps:
+      - run: echo "Env var test"
