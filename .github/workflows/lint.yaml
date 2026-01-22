@@ -1,0 +1,17 @@
+name: Lint workflows
+on:
+  push:
+    paths:
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run actionlint
+        uses: rhysd/actionlint@v1
+        with:
+          fail-on-error: false
