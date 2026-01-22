@@ -7,7 +7,7 @@ This document categorizes actionlint checks by how GitHub Actions handles them:
 
 ## Categorization Table
 
-| Check | Kind | Github Rejected | Error Classification Label | Error Annotation |
+| Check | Kind | GitHub Rejected | Error Classification Label | Error Annotation |
 |-------|------|----------------|----------------------------|------------------|
 | Unexpected keys (job section) | syntax-check | Yes | HardFail | `.github/workflows/t01_unexpected_keys.yml:8:5: unexpected key "invalid_key" for "job" section. expected one of "concurrency", "container", "continue-on-error", "defaults", "env", "environment", "if", "name", "needs", "outputs", "permissions", "runs-on", "secrets", "services", "snapshot", "steps", "strategy", "timeout-minutes", "uses", "with"` |
 | Missing required keys | syntax-check | Yes | HardFail | `.github/workflows/t02_missing_required_keys.yml:6:3: "runs-on" section is missing in job "test"` |
@@ -74,7 +74,7 @@ These workflow files are rejected by GitHub and will not run:
 18. Permissions (invalid scope)
 19. YAML anchors (invalid reference)
 
-### SoftFail (Warnings Only) - 21 checks
+### SoftFail (Warnings Only) - 20 checks
 These workflows run but actionlint detects issues:
 1. Contextual typing for steps.<step_id> objects
 2. Contextual typing for matrix object
@@ -96,7 +96,6 @@ These workflows run but actionlint detects issues:
 18. Constant conditions at if:
 19. Action metadata syntax validation
 20. Deprecated inputs usage
-21. YAML anchors (invalid but not in workflow context)
 
 ### Pass - 1 check
 These workflows have no issues:
